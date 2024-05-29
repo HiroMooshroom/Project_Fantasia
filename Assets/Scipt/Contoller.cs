@@ -1,44 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 
 
 public class Contoller : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float mouseSensitivity = 100f;
-    public CharacterController controller;
-    public Transform playerCamera;
+    #region Variables
+    [SerializeField]
+    float mouseSens;
 
-    private float xRotation = 0f;
+    float xRotation = 0f;
 
-    void Start()
+    [SerializeField]
+    float walkSpeed;
+    Vector2 walkDir;
+
+    [SerializeField]
+    Rigidbody rb;
+
+    [SerializeField]
+    Transform cam;
+    #endregion
+
+    //Sets the movement for the camera, sets the clamp for the camera movement and updates the Walk function
+    public void Update()
     {
-        if (controller == null)
-        {
-            controller = GetComponent<CharacterController>();
-        }
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    void Update()
-    {
-        // Mouse look
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        playerCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        cam.localRotation = Quaternion.Euler(xRotation, 0, 0);
         transform.Rotate(Vector3.up * mouseX);
 
-        // Player movement
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
-
-        Vector3 move = transform.right * moveX + transform.forward * moveZ;
-        controller.Move(move * moveSpeed * Time.deltaTime);
+        Walk();
     }
+
+    /// <summary>
+    /// This method sets the velocity for any walking direction.
+    /// </summary>
+    void Walk()
+    {
+        Vector3 playerV = new Vector3(walkDir.x * walkSpeed, rb.velocity.y, walkDir.y * walkSpeed);
+        rb.velocity = transform.TransformDirection(playerV);
+    }
+
+    /// <summary>
+    /// This function sets the movement vector2 in a vector2 variable.
+    /// </summary>
+    /// <param name="value"></param>
+    void OnMove(InputValue value)
+    {
+        walkDir = value.Get<Vector2>();
+    }
+
 }
