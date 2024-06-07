@@ -23,6 +23,12 @@ public class Contoller : MonoBehaviour
     Transform cam;
     #endregion
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     //Sets the movement for the camera, sets the clamp for the camera movement and updates the Walk function
     public void Update()
     {
