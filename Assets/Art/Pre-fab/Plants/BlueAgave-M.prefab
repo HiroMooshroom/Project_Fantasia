@@ -49,6 +49,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 6468ab004c327614fbab13ba4860c078, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6468ab004c327614fbab13ba4860c078, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8ea711917d6ec4744b5bba92be030e98, type: 2}
@@ -67,6 +71,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6468ab004c327614fbab13ba4860c078, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4703601711053076882}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6468ab004c327614fbab13ba4860c078, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7727841761132415800}
   m_SourcePrefab: {fileID: 100100000, guid: 6468ab004c327614fbab13ba4860c078, type: 3}
 --- !u!1 &5384516120816707467 stripped
 GameObject:
@@ -94,3 +101,35 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!205 &7727841761132415800
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5384516120816707467}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.00000011920929, y: 0.7719976, z: 0}
+  m_Size: 2.754622
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5888835372289050206}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5888835372289050206}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5888835372289050206}
+  m_Enabled: 1
+--- !u!23 &5888835372289050206 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 6468ab004c327614fbab13ba4860c078, type: 3}
+  m_PrefabInstance: {fileID: 5078034202153835226}
+  m_PrefabAsset: {fileID: 0}

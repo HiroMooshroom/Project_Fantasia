@@ -49,6 +49,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 892a3dadc8bda2d49af42e0c4a241cb4, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 892a3dadc8bda2d49af42e0c4a241cb4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2d4abd5938fbec94daff7789981b249b, type: 2}
@@ -67,6 +71,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 892a3dadc8bda2d49af42e0c4a241cb4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5701651071719231344}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 892a3dadc8bda2d49af42e0c4a241cb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 29823384162392651}
   m_SourcePrefab: {fileID: 100100000, guid: 892a3dadc8bda2d49af42e0c4a241cb4, type: 3}
 --- !u!1 &350114458541091080 stripped
 GameObject:
@@ -94,3 +101,35 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7, y: 7.1772046, z: 0.75}
   m_Center: {x: 0, y: 3.5860236, z: 0}
+--- !u!205 &29823384162392651
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350114458541091080}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.03802371, y: 3.5860236, z: -0.117259264}
+  m_Size: 7.172047
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2295471653364058333}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2295471653364058333}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2295471653364058333}
+  m_Enabled: 1
+--- !u!23 &2295471653364058333 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 892a3dadc8bda2d49af42e0c4a241cb4, type: 3}
+  m_PrefabInstance: {fileID: 583975842743112793}
+  m_PrefabAsset: {fileID: 0}

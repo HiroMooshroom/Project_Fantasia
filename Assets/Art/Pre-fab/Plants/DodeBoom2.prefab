@@ -49,6 +49,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: d3df0d9eafa96d74e95501d5adb1436c, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d3df0d9eafa96d74e95501d5adb1436c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dec4c6968212b77428c41086320648db, type: 2}
@@ -67,7 +71,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d3df0d9eafa96d74e95501d5adb1436c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5807821302652362278}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d3df0d9eafa96d74e95501d5adb1436c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8365181885271612695}
   m_SourcePrefab: {fileID: 100100000, guid: d3df0d9eafa96d74e95501d5adb1436c, type: 3}
+--- !u!23 &4936518180782167635 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d3df0d9eafa96d74e95501d5adb1436c, type: 3}
+  m_PrefabInstance: {fileID: 5999811204881959639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6882332909997979526 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d3df0d9eafa96d74e95501d5adb1436c, type: 3}
@@ -94,3 +106,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6, y: 6.343624, z: 0.6}
   m_Center: {x: 0, y: 3.16, z: 0}
+--- !u!205 &8365181885271612695
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6882332909997979526}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.18016768, y: 3.171812, z: 0.36920023}
+  m_Size: 6.343624
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4936518180782167635}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4936518180782167635}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4936518180782167635}
+  m_Enabled: 1
