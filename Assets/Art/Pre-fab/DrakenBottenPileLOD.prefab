@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 38087b4bfbedd2948931a48992858fce, type: 2}
     - target: {fileID: 919132149155446097, guid: caeea719a8150884f95fb111e5133970, type: 3}
       propertyPath: m_Name
-      value: DrakenBottenPile
+      value: DrakenBottenPileLOD
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: caeea719a8150884f95fb111e5133970, type: 3}
       propertyPath: m_StaticEditorFlags
